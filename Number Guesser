@@ -1,0 +1,36 @@
+#Number Guesser by Joshua Joseph
+#Overview - This is a small minigame that let's the user guess a number from 1-50
+
+import time
+import random
+
+username = input("Username?: \n")
+
+time.sleep(2)
+print("Welcome",username,"To Number Guesser \n")
+
+time.sleep(2)
+print("Instructions \n")
+time.sleep(3)
+print("You will be asked to guess a number from 1-10")
+time.sleep(2)
+print("Try to guess that number to win the game")
+
+time.sleep(3)
+print("Ready!, Set!, Let's Begin! \n")
+
+time.sleep(2)
+
+while True:
+
+    num = random.randint(1,10)
+    print(" ")
+    guesser = input("Guess The Number: ")
+    guesser = int(guesser)
+    print(" ")
+
+    if guesser == num:
+        print("You Guessed It!, The Number Was",num)
+
+    else:
+        print("You're wrong! The Number Was",num)
