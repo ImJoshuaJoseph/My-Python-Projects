@@ -1,4 +1,6 @@
 #Calculator Program by Joshua Joseph
+#Overview - This is a simple calculator program made for calculating numbers
+
 
 import time
 
