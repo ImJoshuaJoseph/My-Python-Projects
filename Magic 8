@@ -1,7 +1,6 @@
 #Magic 8 by Joshua Joseph
 #This is a decider inspired by the original Magic 8 ball. Used for when asking a yes or no question.
 
-
 import random
 import time
 
