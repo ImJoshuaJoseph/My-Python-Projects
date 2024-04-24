@@ -1,5 +1,6 @@
 #Number To Binary Convertor by Joshua Joseph
 #This changes an int to a binary
+
 import time
 
 print("Number To Binary")
