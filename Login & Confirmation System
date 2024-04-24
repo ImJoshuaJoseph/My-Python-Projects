@@ -1,0 +1,31 @@
+#Login & Confirmation System by Joshua Joseph
+#Overview - This is a simple and easy login & confirmation system, that when ran. Creates an account for the user, then
+#asks the user to confirm their login details that they've just created
+
+import time
+
+print("GoTube!")
+
+User_Name1 = input("Username: ")
+Password1 = input("Password: ")
+
+time.sleep(2)
+print(" ")
+print("New Account Created!")
+print(" ")
+
+time.sleep(2)
+
+print("Pleaser Re-Enter Your Login Details To Confirm")
+
+User_Name2 = input("Username: ")
+
+Password2 = input("Password: ")
+
+print(" ")
+
+if User_Name2 == User_Name1 and Password2 == Password1:
+    print("Welcome To GoTube,",User_Name1)
+
+else:
+    print("Error, You've Been Logged Out!")
