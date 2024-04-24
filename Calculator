@@ -1,1 +1,78 @@
+#Calculator Program by Joshua Joseph
 
+import time
+
+print("CALCULATOR by Joshua Joseph")
+
+def Add():
+    print("Addition")
+    num1 = int(input("First Number: "))
+    print("+")
+    num2 = int(input("Second Number: "))
+    time.sleep(1)
+    print("Calculating...")
+    time.sleep(2)
+    print(num1,"+",num2,"=",num1+num2)
+
+
+def Subtract ():
+    print("Subtraction")
+    num1 = int(input("First Number: "))
+    print("-")
+    num2 = int(input("Second Number: "))
+    time.sleep(1)
+    print("Calculating...")
+    time.sleep(2)
+    print(num1,"-",num2,"=",num1-num2)
+
+
+def Multiply():
+    print("Multiplication")
+    num1 = int(input("First Number: "))
+    print("x")
+    num2 = int(input("Second Number: "))
+    time.sleep(1)
+    print("Calculating...")
+    time.sleep(2)
+    print(num1,"x",num2,"=",num1*num2)
+
+
+def Division():
+    print("Division")
+    num1 = int(input("First Number: "))
+    print("÷")
+    num2 = int(input("Second Number: "))
+    time.sleep(1)
+    print("Calculating...")
+    time.sleep(2)
+    print(num1,"÷",num2,"=",num1/num2)
+
+
+while True:
+    time.sleep(2)
+    print(" ")
+    Operations = ["1: Addition","2: Subtraction","3: Multiplication","4: Division","5: Close"]
+
+    for x in Operations:
+        print(x)
+
+    Select = int(input("Operation Number: "))
+
+
+
+    if Select == 1:
+        Add()
+
+    elif Select == 2:
+        Subtract()
+
+    elif Select == 3:
+        Multiply()
+
+    elif Select == 4:
+        Division()
+
+    elif Select == 5:
+        print("Closing..")
+        time.sleep(2)
+        break
