@@ -1,0 +1,26 @@
+#Dice Game by Joshua Joseph
+
+import time
+import random
+
+print("Welcome To Da-Dice")
+
+def Rolling():
+    
+    while True:
+        time.sleep(3)
+
+        print("Rolling...")
+
+        time.sleep(1)
+
+        print(random.randint(1,6))
+
+        rollagain = input("Roll Again? ")
+
+        print(" ")
+
+        if rollagain.capitalize() == "No":
+            break
+
+Rolling()
