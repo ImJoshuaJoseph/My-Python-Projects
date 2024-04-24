@@ -1,4 +1,6 @@
 #Dice Game by Joshua Joseph
+#Overview - This is a dice rolling decider, that randomly generates a number from 1-6 when rolled. 
+Inspired by the original dice object used when playing board games.
 
 import time
 import random
