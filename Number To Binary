@@ -1,0 +1,19 @@
+#Number To Binary Convertor by Joshua Joseph
+#This changes an int to a binary
+import time
+
+print("Number To Binary")
+time.sleep(2)
+
+def binary(num):
+        
+        if num > 1:
+            binary(num//2)
+            
+        print(num % 2, end= " ")
+
+while True:
+    print("\n")
+    number = int(input("Enter Number: "))
+
+    binary(number)
