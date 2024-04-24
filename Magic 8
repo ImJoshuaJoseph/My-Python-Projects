@@ -1,0 +1,42 @@
+#Magic 8 by Joshua Joseph
+
+import random
+import time
+
+time.sleep(1)
+
+print("Welcome To Magic 8!")
+
+time.sleep(2)
+
+print("Say 'Stop', to quit")
+
+time.sleep(2)
+
+print("Let's Begin..!")
+
+yesno = "Yes", "No"
+
+while True:
+    time.sleep(2)
+    print(" ")
+    print("Ask Me A Yes or No Question")
+
+    time.sleep(2)
+
+    question = input("Question Here: ")
+
+    print(" ")
+
+    time.sleep(2)
+
+    print("Loading...")
+
+    time.sleep(2)
+
+    print(random.choice(yesno))
+
+    print(" ")
+    
+    if question.capitalize() == "Stop":
+        break
