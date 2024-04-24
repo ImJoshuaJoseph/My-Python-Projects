@@ -2,7 +2,7 @@
 
 import time
 
-print("CALCULATE ME by Joshua Joseph")
+print("Calculate Me by Joshua Joseph")
 
 def Add():
     print("Addition")
