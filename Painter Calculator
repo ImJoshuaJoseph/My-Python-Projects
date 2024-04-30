@@ -1,0 +1,38 @@
+#This program calculates the cost, minutes and hours, it would take to paint a square feet
+#Made by Joshua Joseph
+
+print("WELCOME TO GENERAL PAINTERS")
+
+print("Let's begin with some information.")
+
+print("COST PER SQUARE FT?")
+cost = int(input(": $"))
+
+print("Minutes per square ft (One Worker)")
+minutes = int(input(": "))
+
+print("Are to be painted?")
+length = int(input("Length: "))
+width = int(input("Width: "))
+print(" ")
+print("Total Area: ",length*width)
+print(" ")
+
+mins = int(minutes * length % 60)
+hours = int(mins - minutes % 60)
+
+print("Total Cost To Paint",length*width,"square ft is, $",length*width*cost)
+print(" ")
+print("This will take us approximately",hours,"hours and",mins,"minutes \n")
+
+print("Amount of workers?")
+workers = int(input(": "))
+print(" ")
+
+new_mins = int(minutes / workers * length*width % 60)
+new_hours = int(hours / workers * length*width % 24)
+
+print("Due to",workers,"workers added to the job. \n")
+print("The total time to complete the job will be",new_hours,"hours and",new_mins,"minutes \n")
+
+print("Thank you for working with us!")
