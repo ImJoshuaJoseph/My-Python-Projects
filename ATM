@@ -1,0 +1,222 @@
+#This ATM program was made to show what happends at the back end of an online ATM software
+#Made By Joshua Joseph  
+
+
+import time     #<< TIME MODULE
+import random    #<<RANDOM MODULE
+
+
+balance = []  #<< LIST STORIG THE USERS BALANCE
+
+#______________________________________________________________________________________________________________________
+
+print("𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗖-𝗕𝗔𝗡𝗞 \n")   #<< TITLE
+
+time.sleep(2)    #<<THIS STATEMENT IS PART OF THE TIME MODULE (SLOWS DOWN THE OUTPUT)
+print("𝗟𝗲𝘁'𝘀 𝗰𝗿𝗲𝗮𝘁𝗲 𝗮𝗻 𝗮𝗰𝗰𝗼𝘂𝗻𝘁 \n")
+
+time.sleep(2)
+name1 = input("𝗪𝗵𝗮𝘁 𝗶𝘀 𝘆𝗼𝘂𝗿 𝗳𝘂𝗹𝗹 𝗻𝗮𝗺𝗲?: ")    #<< ASKS THE USER FOR THEIR FULL NAME
+print(" ")
+
+card_password = input("𝗘𝗻𝘁𝗲𝗿 𝗔 𝗳𝗼𝘂𝗿 𝗱𝗶𝗴𝗶𝘁 𝗰𝗼𝗱𝗲: ")    #<<ASKS THE USER TO ENTER A FOUR DIGIT CODE OF ANY NUMBER
+print(" ")
+
+living_in = input("𝗪𝗵𝗮𝘁 𝗶𝘀 𝘆𝗼𝘂𝗿 𝗮𝗱𝗱𝗿𝗲𝘀𝘀?: ")   #<<ASKS THE USER FOR THEIR ADDRESS
+print(" ")
+
+e_mail = input("𝗘-𝗺𝗮𝗶𝗹: ")   #<<ASKS THE USER FOR THEIR E-MAIL
+print(" ")
+
+phone_number = input("𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗡𝘂𝗺𝗯𝗲𝗿 (10 digits): ")   #<<ASKS THE USER FOR THEIR CONTACT NUMBER
+print("""
+
+
+               """)
+#______________________________________________________________________________________________________________________
+
+time.sleep(2)
+print("𝙇𝙤𝙖𝙙𝙞𝙣𝙜 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙩𝙞𝙤𝙣...\n")    #<<PRINTS (LODAING INFORMATION)
+print(" ")
+
+time.sleep(3)
+print("𝗙𝗨𝗟𝗟 𝗡𝗔𝗠𝗘: ",name1.upper(),"\n")    #<< PRINTS THE USER FULL NAME FROM EARLIER IN ALL CAPS
+
+time.sleep(3)
+print("𝗖𝗔𝗥𝗗 𝗖𝗢𝗗𝗘: ",card_password,"\n")   #<<PRINTS THE USER CARD CODE
+
+time.sleep(3)
+print("𝗔𝗗𝗗𝗥𝗘𝗦𝗦: ",living_in.upper(),"\n")    #<<PRINTS THE USER ADDRESS
+
+time.sleep(3)
+print("𝗘-𝗠𝗔𝗜𝗟: ",e_mail.upper(),"\n")    #<<PRINTS THE USER E-MAIL
+
+
+time.sleep(3)
+print("𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗡𝗨𝗠𝗕𝗘𝗥: ",phone_number[0:3],"-",phone_number[3:6],"-",phone_number[6:10],"\n")  
+#THE ABOVE STATEMNT PRINTS THE USER CONTACT NUMBER, BUT TAKES THE DIGIT FROM THE SPECIFIED INDEX, AND ALSO ADDS A " - " BETWEEN THEM
+
+
+time.sleep(3)
+print("𝗖𝗔𝗥𝗗 𝗡𝗨𝗠𝗕𝗘𝗥: ",random.randint(1000,5000)," ",random.randint(1000,5000)," ",random.randint(1000,5000)," ",random.randint(1000,5000),"\n")
+#USING THE RANDOM MODULE, THE ABOVE CODE GENERATES A RANDOM FOUR DIGIT NUMBER FROM 1000 TO 5000
+
+time.sleep(3)
+print("𝗘𝗫𝗣𝗜𝗥𝗔𝗧𝗜𝗢𝗡 𝗗𝗔𝗧𝗘: May",random.randint(1,30),"th, 2027 \n")    #<<PRINTS AN EXPIRATIO DATE
+
+time.sleep(3)
+print("𝗧𝗛𝗔𝗡𝗞 𝗬𝗢𝗨 𝗙𝗢𝗥 𝗖𝗥𝗘𝗔𝗧𝗜𝗡𝗚 𝗬𝗢𝗨𝗥 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 \n")    #<<THANKS THE USER
+
+
+time.sleep(3)
+print("𝙇𝙊𝘼𝘿𝙄𝙉𝙂 𝘼𝙏𝙈....\n")     #<<PRINTS LODING ATM
+
+time.sleep(3)
+
+print("                            ᑕ-ᗷᗩᑎK ᗩTᗰ \n")    #<<BANK TITLE NAME
+
+#______________________________________________________________________________________________________________________
+
+def withdrawal():    #<<WITHDRAWAL FUNTION FOR USER TO REMOVE MONEY
+    
+    global balance   #GLOBALISES THE BALANCE VARIABLE TO BE USED IN THE FUNTION
+    
+    print(" ")
+    
+    withdrawal = int(input("𝗔𝗠𝗢𝗨𝗡𝗧: $"))    #<<ASKS THE USER FOR THE AMOUNT THEY ARE WITHDRAWING
+    
+    print(" ")
+    
+    removing = sum(balance) - withdrawal    #<< SUMS UP THE NUMBERS FROM THE BALANCE LIST, AND SUBTRACTS THE USER WITHDRAWL AMOUNT
+    
+    time.sleep(2)
+    print("𝙋𝙍𝙊𝘾𝙀𝙎𝙎𝙄𝙉𝙂... \n")    #<< PRITS PROCESSING
+    
+    
+    time.sleep(2)
+    print("$",removing)    #<< PRINTS THE TOTAL 
+    
+    balance.clear()    #<<CLEARS THE USER ALREADY HAD BALANCE
+    
+    balance.append(removing)   #<< ADDS THE NEW TOTAL INTO THE BALANCE
+    
+    if sum(balance) == 0 or sum(balance) < -0:  #IF THE SUM OF THE BALANCE IS 0, IT WILL DIRECT THEM TO THE CHOOSING OPTIO AGAIN
+        
+        
+        print(" ")
+        
+        print("𝗔𝗗𝗗 𝗠𝗢𝗡𝗘𝗬 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 \n")   #<< PRINTS ADD MONEY TO YOUR ACCOUNT
+    
+#______________________________________________________________________________________________________________________
+
+    
+def check_balance():   #<< FUCNTIO TO CHECK USERS BALANCE
+    
+    print(" ")
+    
+    global balance   #<< GLOBALISES THE BALANCE VARIABLE
+    
+    print("𝗕𝗔𝗟𝗔𝗡𝗖𝗘: $",sum(balance))   #PRINT THE SUM OF THE BALANCE
+    
+    print(" ")
+#______________________________________________________________________________________________________________________
+
+    
+def deposit():    #<< DEPOSIT FUNTION
+    
+    print(" ")
+    
+    deposit = int(input("𝗔𝗠𝗢𝗨𝗡𝗧: $"))   #<< ASKS THE USER FOR THE AMOUNT  TO BE DEPOSITED
+    balance.append(deposit)    #<< ADDS THE DEPOSIT AMOUNT TO THE BALANCE LIST
+    
+    print(" ")
+    
+    adding = sum(balance) + deposit    #<<TAKE THE USER DEPOSITED AMOUNT AND ADDS IT TO THE ALREADY HAD BALANCE
+    
+    
+    print("$",sum(balance))   #<< PRINTS THE SUM OF THE NEW BALANCE
+    
+    print(" ")
+
+#______________________________________________________________________________________________________________________
+    
+def send():    #<< SEND FUNCTION FOR THE USER TO SEND MONEY 
+    
+    print(" ")
+    
+    send = int(input("𝗔𝗠𝗢𝗨𝗡𝗧: $"))   #<< ASKS THE USER FOR THE SENDING AMOUNT
+    
+    print(" ")
+    
+    print("𝗘𝗡𝗧𝗘𝗥 𝗧𝗛𝗘 𝗥𝗘𝗖𝗜𝗩𝗘𝗥'𝗦 𝗡𝗔𝗠𝗘: \n")    #<< ASKS THE USER FOR THE NAME THEY ARE SENDING THE MONEY TO
+
+    name = input(": ")
+    
+    print(name1,"𝙄𝙎 𝙎𝙀𝙉𝘿𝙄𝙉𝙂 $",send,"𝙏𝙊",name,"\n")   #<< PRINTS THE USER'S NAME IS SENDING MONEY TO THE PERSON'S NAME
+    
+    time.sleep(2)
+    print("𝙎𝙚𝙣𝙙𝙞𝙣𝙜....")   #<< PRINTS SENDING
+    
+    time.sleep(2)
+    print("𝙎𝙪𝙘𝙘𝙚𝙨𝙨!")   #<< PRINTS SUCCESS
+    
+    sending = sum(balance) - send   #<< TAKES THE SUM OF THE BALANCE AND SUBTRACTS THE SENDING AMOUNT 
+    
+    balance.clear()  #<< CLEARS THE ALREADY HAD BALANCE
+    
+    balance.append(sending)   #<< ADDS THE NEW BALANCE
+          
+    print("$",sum(balance))  #<< PRITNS THE SUM OF THE NEW BALANCE
+    
+    print(" ")
+          
+#______________________________________________________________________________________________________________________
+
+def atm():   #ATM FUNCTION TO BE CALLED
+    
+    while True:   #WHEN THE FUNCTION IS CALLED THE FOLLOWIG OCCURS
+        
+        print("  ")
+    
+        print("1: 𝗪𝗜𝗧𝗛𝗗𝗥𝗔𝗪𝗔𝗟           2: 𝗖𝗛𝗘𝗖𝗞 𝗕𝗔𝗟𝗔𝗡𝗖𝗘")   #___________________________________________
+        print(" ")                                             #
+        print("3: 𝗗𝗘𝗣𝗢𝗦𝗜𝗧              4: 𝗦𝗘𝗡𝗗")              #  GIVES THE USER OPTIOS TO CHOOSE FROM
+        print(" ")                                             #
+        print("              5:  𝗘𝗫𝗜𝗧")                        #____________________________________________
+        
+        print(" ")
+    
+        select = input("#: ")    #<<ASKS THE USER FOR AN OPTION NUMBER
+    
+        if select == "1":    #<< IF THE USER OPTION NUMBER WAS 1
+            withdrawal()    #<< THE WITHDRAWAL FUNCTION IS CALLED
+        
+        elif select == "2":   #<<  ELIF THE USER OPTION WAS 2
+            check_balance()   #<< THE CHECK_BALANCE FUNCTION IS CALLED
+        
+        elif select == "3":   #<< ELIF THE USER OPTION NUMBER WAS 3
+            deposit()        #<< THE DEPOSIT FUNCTION IS CALLED
+        
+        elif select == "4":   #<< ELIF THE USER OPTION NUMBER WAS 4
+            send()            #<< THE SEND FUNCTION IS CALLED
+        
+        elif select == "5":     #<< ELIF THE USER OPTION WAS 5
+            break    #<< THE WHILE TRUE STATEMENT IS BROKEN
+            
+#______________________________________________________________________________________________________________________
+
+while True:   #<<WHILE TRUE STATEMENT
+    
+    
+    code = input("CODE: ")   #<<ASKS THE USER TO INPUT THE FOUR DIGIT CODE THEY MADE EARLIER
+    print(" ")
+    
+    if code == card_password:   #<<IF THE CODE WAS == TO THE SAME CODE THEY ENETERED EARLIER
+        atm()      #<<< THE ATM FUNCTION IS SET TO BE CALLED
+        break  #<< THEN IT BREAK THE WHILE TRUE
+    
+    else:   #<<ELSE, PRINTS AN ERROR, AND ASK THE USER TO ENTER THE CODE AGAIN
+        
+        print("ERROR \n")
+
+#______________________________________________________________________________________________________________________
