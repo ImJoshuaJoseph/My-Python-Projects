@@ -1,0 +1,197 @@
+#This program calculates the amount of profit, items sold, customers and sales a business owner made at the end of the day, and at the end
+#of the month
+#Made by Joshua Joseph
+
+#_____________________________________________________
+
+import time   #<<TIME MODULE
+
+import random   #<<RANDOM MODULE
+
+print("𝗝𝗢𝗬 𝗧𝗢𝗬 𝗨𝗣𝗗𝗔𝗧𝗘 !! \n")    #<<TITLE
+#_____________________________________________________
+
+all_customer = []    #<<LIST STORING ALL CUSTOMER
+
+all_sales = []  #<<LIST STORING ALL SALES
+
+all_profit = []  #<<LIST STORING ALL PROFIT 
+
+
+monthly_customer = []  #<<LIST STORING MONTHLY CUSTOMER
+
+monthly_sales = []  #<<LIST STORING MONTHLY SALES
+
+monthly_profit = []   #<<LIST STORING MONTHLY PROFIT
+
+totaltoys = 2000
+
+totalinvest = 20000
+
+#_____________________________________________
+
+#WHILE TRUE STATEMENT RESPONSIBLE FOR LOOPING TH PRORGRAM
+
+while True:
+    
+    day = int(input("𝗗𝗔𝗬:"))  #<<ASK THE OWNER FOR WHAT DAY IT IS
+    
+    print("")
+    customer = random.randint(1,10)    #<<RANDOM MODULE WILL GENERATE A RANDOM NUMBER USED AS THE CUSTOMER
+    
+    print("𝗖𝗨𝗦𝗧𝗢𝗠𝗘𝗥𝗦:",customer)    #<<PRINT CUSTOMER AND THE RANDOM NUMBER
+    
+    all_customer.append(customer)     #<<APPENDS THE CUSTOMER TO THE (ALL_CUSTOMER) LIST
+    
+    monthly_customer.append(customer)   #<<APPENDS THE CUSTOMER TO THE (MONTHLY_CUSTOMER) LIST
+#_______________________________________________________________________________________________________
+    
+    print(" ")
+    
+    #ASK THE USER HOW MUCH TOY A PURCHASED AND ADDS IT TO THE (ALL_SALES & MONTHLY_SALES) LIST
+    
+    print("𝗡𝗨𝗠𝗕𝗘𝗥 𝗢𝗙 𝗧𝗢𝗬 𝗔 𝗣𝗨𝗥𝗖𝗛𝗔𝗦𝗘𝗗 \n")    
+    ToyA = int(input(": "))    
+    all_sales.append(ToyA)       
+    monthly_sales.append(ToyA)   
+    print(" ")
+    
+    #ASK THE USER HOW MUCH TOY B PURCHASED AND ADDS IT TO THE (ALL_SALES & MONTHLY_SALES) LIST
+
+    print("𝗡𝗨𝗠𝗕𝗘𝗥 𝗢𝗙 𝗧𝗢𝗬 𝗕 𝗣𝗨𝗥𝗖𝗛𝗔𝗦𝗘𝗗 \n")
+    ToyB = int(input(": "))
+    all_sales.append(ToyB)
+    monthly_sales.append(ToyB)
+    print(" ")
+    
+    #ASK THE USER HOW MUCH TOY A * B PURCHASED AND ADDS IT TO THE (ALL_SALES & MONTHLY_SALES) LIST
+    
+    print("𝗡𝗨𝗠𝗕𝗘𝗥 𝗢𝗙 𝗧𝗢𝗬 𝗔 𝗔𝗡𝗗 𝗕 𝗣𝗨𝗥𝗖𝗛𝗔𝗦𝗘𝗗 \n")    
+    ToyAB = int(input(": "))
+    all_sales.append(ToyAB)
+    monthly_sales.append(ToyAB)
+    print(" ")
+    
+#____________________________________________________________________________________________________________
+    
+    print("𝗣𝗥𝗢𝗙𝗜𝗧 𝗠𝗔𝗗𝗘: \n") 
+
+    #CALCULATING PROFIT IS DONE BY: 
+    #SELLING PRICE($10) - AVERAGE PRICE($8) * QUANTITY(___)
+    
+#___________________________________________________________________________________________________
+    
+    #CALCULATION FOR TOY A PROFIT
+    
+    print("TOY A: \n")
+    toya_price = ToyA*10     
+    
+    toya_profit = ToyA*8      
+    
+    toya = toya_price - toya_profit     
+    
+    toya2 = toya * ToyA     
+    
+    all_profit.append(toya2)
+    monthly_profit.append(toya2)
+    
+    print("$",toya2)
+    print(" ")
+#____________________________________________________________________
+    
+    #CALCULATION FOR TOY B PROFIT
+    
+    print("TOY B: \n")
+    toyb_price = ToyB*17   
+    
+    toyb_profit = ToyB*14    
+    
+    toyb = toyb_price - toyb_profit     
+    
+    toyb2 = toyb * ToyB    
+    
+    all_profit.append(toyb2)
+    monthly_profit.append(toyb2)
+    
+    print("$",toyb2)
+    print(" ")
+#_____________________________________________________________________________
+    
+    #CALCULATION FOR TOY A & B PROFIT
+    
+    print("Toy A & B: \n")
+    
+    toyab_price = ToyAB*27    
+    
+    toyab_profit = ToyAB*22      
+    
+    toyab = toyab_price - toyab_profit      
+    
+    toyab2 = toyab * ToyAB     
+    
+    all_profit.append(toyab2)
+    monthly_profit.append(toya2)
+    
+    print("$",toyab2)
+    print(" ")
+          
+#__________________________________________________________________________________
+
+#WHILE TRUE STATEMENT CALCUALTING TOTAL SALES,CUSTOMERS AND PROFIT
+
+    while True:
+        
+        print(" ")
+        time.sleep(2)     
+        print("𝗖𝗮𝗹𝗰𝘂𝗹𝗮𝘁𝗶𝗻𝗴... \n")
+    
+        time.sleep(4)
+        print("𝗟𝗼𝗮𝗱𝗶𝗻𝗴... \n")
+    
+        time.sleep(4)
+        
+        print("𝗧𝗢𝗧𝗔𝗟 𝗖𝗨𝗦𝗧𝗢𝗠𝗘𝗥𝗦:",sum(all_customer),"\n")   #<<ADDS THE TOTAL CUSTOMER IN THE(ALL_CUSTOMER) LIST AND PRINT IT
+        all_customer.remove(customer)
+    
+        print("𝗧𝗢𝗧𝗔𝗟 𝗦𝗔𝗟𝗘𝗦: ",sum(all_sales),"\n")    #<<ADDS THE TOTAL SALES IN THE(ALL_SALES) LIST AND PRINT IT
+        all_sales.remove(ToyA)
+        all_sales.remove(ToyB)
+        all_sales.remove(ToyAB)
+        
+        
+        print("𝗧𝗢𝗧𝗔𝗟 𝗣𝗥𝗢𝗙𝗜𝗧: ","$",sum(all_profit),"\n")   #<<ADDS THE TOTAL PROFIT IN THE(ALL_PROFIT LIST AND PRINT IT
+        all_profit.remove(toya2)
+        all_profit.remove(toyb2)
+        all_profit.remove(toyab2)
+        
+        
+        break
+#________________________________________________________________
+
+#IF THE OWNER IS ON DAY 30 THE FOLLOWING WILL RUN:
+        
+    if day == 30:
+        
+        time.sleep(3)
+        print("𝗜𝗧'𝗦 𝗧𝗛𝗘 𝗘𝗡𝗗 𝗢𝗙 𝗧𝗛𝗘 𝗠𝗢𝗡𝗧𝗛!")
+        time.sleep(1)
+        print("𝗧𝗜𝗠𝗘 𝗧𝗢 𝗖𝗔𝗟𝗖𝗨𝗟𝗔𝗧𝗘 𝗬𝗢𝗨𝗥 𝗠𝗢𝗡𝗧𝗛𝗟𝗬 𝗦𝗧𝗔𝗧𝗦!")
+        
+        print(" ")
+        time.sleep(2)     
+        print("𝗖𝗮𝗹𝗰𝘂𝗹𝗮𝘁𝗶𝗻𝗴... \n")
+    
+        time.sleep(4)
+        print("𝗟𝗼𝗮𝗱𝗶𝗻𝗴... \n")
+    
+        time.sleep(4)
+        
+        print("𝗠𝗢𝗡𝗧𝗛𝗟𝗬 𝗖𝗨𝗦𝗧𝗢𝗠𝗘𝗥𝗦:",sum(monthly_customer),"\n")  #<<ADDS THE TOTAL CUSTOMER IN THE (MONTHLY_CUSTOMER) LIST AND PRINT IT
+    
+        print("𝗠𝗢𝗡𝗧𝗛𝗟𝗬 𝗦𝗔𝗟𝗘𝗦: ",sum(monthly_sales),"\n")   #<<ADDS THE TOTAL SALES IN THE(MONTHLY_SALES) LIST AND PRINT IT
+        
+        print("𝗠𝗢𝗡𝗧𝗛𝗟𝗬 𝗣𝗥𝗢𝗙𝗜𝗧: ","$",sum(monthly_profit),"\n")      #<<ADDS THE TOTAL PROFIT IN THE(MONTHLY_PROFIT) LIST AND PRINT IT
+
+        
+    if sum(all_sales) == 2000:
+        print("𝗢𝗨𝗧 𝗢𝗙 𝗦𝗧𝗢𝗖𝗞")
