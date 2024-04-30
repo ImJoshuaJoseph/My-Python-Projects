@@ -1,0 +1,27 @@
+username = input("Username: ")
+print(" ")
+print(username,"'s Note Pad \n")
+
+file = input("File Name: ")
+filename = []
+filename.append(file)
+
+notefile = []
+
+print(" ")
+print("Press [Space] and Enter <- , to stop typing \n")
+print(username,"is typing... \n")
+
+while True:
+    notes = str(input())
+    notefile.append(notes)
+    
+    if notes == " ":
+        break
+        
+print(" ")
+for title in filename:
+    print(title)
+print(" ")
+for notes in notefile:
+    print(notes)
