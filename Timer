@@ -1,0 +1,24 @@
+TIMER ADVANCE
+ 
+ import time       #<<TIME MODULE
+
+print("  Timer Me   \n")   #<< TITLE
+
+timer = int(input("Seconds: "))    #<<ASK FOR AMOUNT OF SECONDS
+print(" ")
+
+
+#STATEMENT FOR THE TIMER
+
+while timer:   #<< WHILE TIME IS TRUE
+    mins, secs = divmod(timer, 60) 
+    seconds = '{:02d}:{:02d}'.format(mins, secs)
+    print(seconds, end="\r") 
+    time.sleep(1)   #<< DELAYS THE VALUE BY ONE SECOND  
+    timer -= 1    #<< DECREASES THE VALUE BY ONE
+    
+    
+    if timer == 0:  #<< IF THE VALUE IS AT 0 IT DOES THE FOLLOWING:
+        
+        print(" ")
+        print("TIMES UP!!")
