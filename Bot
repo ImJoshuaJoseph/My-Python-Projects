@@ -1,0 +1,66 @@
+import time   #<< TIME MODULE
+import datetime  #<<DATE AND TIME MODULE
+
+
+name = input("Name?:")  #<<ASKS THE USER FOR THEIR NAME
+
+
+#LOOP STATEMENT AND IF STATEMENTS 
+#INTRODUCTION
+
+while True:
+    time.sleep(2)
+    print(" ")
+    print("Welcome",name,"I am KOKA! \n")  #<<TITLE AND INTRO
+    time.sleep(4)
+    print("your personal assistant \n")
+    
+    time.sleep(2)
+    print("Ask me anything \n")
+    
+    time.sleep(2)
+    print("Say 'stop', to quit")
+    
+    break
+    
+#MORE LOOP STATEMENTS AND IF FUNCTION
+
+while True:
+    print(" ")
+    question = input() #<<INPUT FOR THE USER TO ASK QUESTIONS
+
+    if "weather" in question:#<<RESPONSIBLE FOR THE WEATHER
+        print(" ")
+        print("It's hot")
+        print(" ")
+    
+    elif "time" in question:#<<RESPONSIBLE FOR THE TIME
+        print(" ")
+        x = datetime.datetime.now()
+        print(x.strftime("%X"))
+        print(" ")
+    
+    elif "date" in question:#<<RESPONSIBLE FOR THE DATE
+        print(" ")
+        x = datetime.datetime.now()
+        print(x.strftime("%x"))
+        print(" ")
+    
+    elif "month" in question:#<<RESPONSIBLE FOR THE MONT
+        print(" ")
+        x = datetime.datetime.now()
+        print(x.strftime("%B"))
+        print(" ")
+    
+    elif "day" in question:#<<RESPONSIBLE FOR THE DAY
+        print(" ")
+        x = datetime.datetime.now()
+        print(x.strftime("%A"))
+        print(" ")
+    
+    elif "stop" in question:#<<STOPS THE PROGRAM IF THE USER SAYS "STOP"
+        break
+        
+    else:
+        print(" ")
+        print("Sorry can't help you :( ")#<< SORRY
